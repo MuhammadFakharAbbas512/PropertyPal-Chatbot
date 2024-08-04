@@ -9,7 +9,7 @@ Original file is located at
 
 
 
-import mlflow
+#import mlflow
 import pandas as pd
 from langchain.llms import HuggingFacePipeline
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -105,7 +105,7 @@ Your responses should be concise and focused on the data provided, with no addit
 
     def buildRetrieval(self, model_name="sentence-transformers/all-MiniLM-L6-v2", csv_file=None):
         if csv_file is None:
-            csv_file = r"Users/hadeedrauf6/properties.csv"
+            csv_file = r"properties.csv"
 
         df = pd.read_csv(csv_file)
 
@@ -142,7 +142,7 @@ def getAnswer(chain, question):
     return parser.parse(response_text)
 
 def main():
-    mlflow.autolog()
+    #mlflow.autolog()
     model_instance = LLMRAGModel()
     chain = model_instance.getNewChain()
 
