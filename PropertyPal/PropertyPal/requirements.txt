@@ -1,0 +1,7 @@
+streamlit
+pandas
+langchain-community
+transformers
+torch
+sentence-transformers
+anvil-uplink
